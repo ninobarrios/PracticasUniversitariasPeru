@@ -21,8 +21,6 @@ function obtenerEstadisticas() {
         }))
         .catch(error => {
             document.getElementById('spinner').style.display = 'none';
-            console.error('Error al obtener las estadísticas:', error);
-            document.getElementById('stats-container').innerHTML = '<p class="error-message">Error al cargar las estadísticas.</p>';
         });
 }
 
@@ -187,9 +185,8 @@ let isMenuOpen = false;
             navbarCollapse.classList.toggle('show', isMenuOpen);
         }
 
-        // Función para manejar clics en los enlaces del menú
         function handleNavItemClick() {
             if (isMenuOpen) {
-                toggleMenu(); // Cerrar el menú si se hace clic en un enlace
+                toggleMenu(); 
             }
         }

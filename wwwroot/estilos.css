@@ -1767,6 +1767,7 @@ th,td{
     .imagenlogo {
         width: 150px;
         left: 20px;
+        margin-left: 0px !important;
     }
 
     .inserciones {

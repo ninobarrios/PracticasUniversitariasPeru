@@ -1008,8 +1008,7 @@
             }))
             .catch(error => {
                 document.getElementById('spinner').style.display = 'none';
-                console.error('Error al obtener las estadísticas:', error);
-                document.getElementById('stats-container').innerHTML = '<p class="error-message">Error al cargar las estadísticas.</p>';
+                
             });
     }
 
