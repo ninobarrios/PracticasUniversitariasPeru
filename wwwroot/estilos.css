@@ -1707,7 +1707,7 @@ td strong {
         line-height: 1.5 !important;
 
     }
-th{
+th,td{
     padding: 5px;
     font-size: 14px !important;
 }
