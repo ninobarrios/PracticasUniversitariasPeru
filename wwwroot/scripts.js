@@ -2,7 +2,7 @@ function obtenerEstadisticas() {
     axios.all([
         axios.get('/contarObservacionesSemana'),
         axios.get('https://practicasuniversitariasperu.onrender.com/contarObservacionesTotal'),
-        axios.get('https://www.practicasuniversitariasperu.com/contarObservacionesDiaAnterior')
+        axios.get('https://practicasuniversitariasperu.com/contarObservacionesDiaAnterior')
     ])
         .then(axios.spread((responseSemana, responseTotal, responseDiaAnterior) => {
             console.log("Semana:", responseSemana.data);
