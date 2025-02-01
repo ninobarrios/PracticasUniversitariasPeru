@@ -1,7 +1,7 @@
 function obtenerEstadisticas() {
     axios.all([
-        axios.get('/contarObservacionesSemana'),
-        axios.get('https://practicasuniversitariasperu.onrender.com/contarObservacionesTotal'),
+        axios.get('https://practicasuniversitariasperu.com/contarObservacionesSemana'),
+        axios.get('https://practicasuniversitariasperu.com/contarObservacionesTotal'),
         axios.get('https://practicasuniversitariasperu.com/contarObservacionesDiaAnterior')
     ])
         .then(axios.spread((responseSemana, responseTotal, responseDiaAnterior) => {
@@ -51,7 +51,7 @@ window.onload = function () {
 
     document.getElementById('spinner').style.display = 'block';
 
-    axios.get('https://www.practicasuniversitariasperu.com/ofertas-laborales-hoy')
+    axios.get('https://practicasuniversitariasperu.com/ofertas-laborales-hoy')
         .then(response => {
             document.getElementById('spinner').style.display = 'none';
 
