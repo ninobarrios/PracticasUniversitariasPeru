@@ -231,12 +231,10 @@ app.get("/selecionarcarrera/:carrera", (req, res) => {
 
 app.use(express.static(path.join(__dirname, '../wwwroot')));
 
-// Ruta para sitemap.xml
 app.get('/sitemap.xml', (req, res) => {
   res.sendFile(path.join(__dirname, '../wwwroot/sitemap.xml'));
 });
 
-// Ruta para el index.html
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../wwwroot/index.html'));
 });
