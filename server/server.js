@@ -17,8 +17,13 @@ app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
     next();
-  });
-  app.use(express.json());
+});
+app.use(express.json());
+
+console.log('DB_HOST:', process.env.DB_HOST);
+console.log('DB_USER:', process.env.DB_USER);
+console.log('DB_PASSWORD:', process.env.DB_PASSWORD);
+console.log('DB_DATABASE:', process.env.DB_DATABASE);
 
 const pool = mysql.createPool({
     host: process.env.DB_HOST,
@@ -40,6 +45,7 @@ pool.getConnection((err, connection) => {
     console.log('Connected to the database.');
     connection.release();
 });
+
 
 app.get("/ofertas-laborales", (req, res) => {
     const query = `

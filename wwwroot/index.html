@@ -5,17 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prácticas Profesionales y Preprofesionales en Perú para Estudiantes y Egresados</title>
-    <link rel="icon" href="https://www.practicasuniversitariasperu.com/logoprincipal.png" />
+    <link rel="icon" href="https://practicasuniversitariasperu.com/logoprincipal.png" />
     <meta name="description"
         content="Descubre miles de prácticas profesionales y preprofesionales en todo Perú para estudiantes y recién egresados en diversas áreas técnicas y profesionales del sector publico y privado.">
-    <link rel="canonical" href="https://www.practicasuniversitariasperu.com/" />
+    <link rel="canonical" href="https://practicasuniversitariasperu.com/" />
     <meta property="og:title" content="Prácticas Profesionales y Preprofesionales en Perú" />
     <meta property="og:description"
         content="Descubre miles de prácticas profesionales y preprofesionales en todo Perú para estudiantes y recién egresados en diversas áreas técnicas y profesionales del sector publico y privado." />
-    <meta property="og:image" content="https://www.practicasuniversitariasperu.com/logoprincipal.png" />
-    <meta property="og:url" content="https://www.practicasuniversitariasperu.com" />
+    <meta property="og:image" content="https://practicasuniversitariasperu.com/logoprincipal.png" />
+    <meta property="og:url" content="https://practicasuniversitariasperu.com" />
     <meta property="og:type" content="website" />
     <meta name="keywords" content="prácticas profesionales, prácticas preprofesionales, empleo para estudiantes, oportunidades laborales en Perú, prácticas en el sector público, prácticas en el sector privado, prácticas universitarias, becas para egresados, trabajos para estudiantes Perú">
+    <link rel="icon" type="image/png" href="/wwwroot/imagenes/practicas.png">
 
     <link rel="stylesheet" href="/estilos.css">
     <script src="/scripts.js"></script>
@@ -58,7 +59,7 @@
                     técnicas y profesionales.</h3>
             </div>
         </div>
-
+ <!--  
         <div class="total_observaciones">
             <div class="inserciones">
                 <div class="dia">
@@ -77,7 +78,7 @@
         </div>
 
 
-        <div id="spinner" class="spinner"></div>
+        <div id="spinner" class="spinner"></div>-->
         <div class='msgini'>
             <h1 style="color: #47b72f;">¿Estás buscando prácticas profesionales?</h1>
             <p>En esta página encontrarás una amplia variedad de ofertas laborales dirigidas especialmente a estudiantes
@@ -96,16 +97,18 @@
                 de nuestras ofertas y comienza tu camino hacia el éxito laboral.</p>
         </div>
 
+
         <div id="spinner" style="display: block;"></div>
+        <!-- 
         <div id="offers-container2"></div>
 
         <div id="paginationdos">
             <button id="prevPage" onclick="changePage('prev')">Anterior</button>
-            <div id="pageNumbers"></div> <!-- Contenedor de números de página -->
+            <div id="pageNumbers"></div> 
             <button id="nextPage" onclick="changePage('next')">Siguiente</button>
         </div>
 
-
+ -->
 
 
         <div class='msgdcrp'>
@@ -999,31 +1002,6 @@
         </div>
     </div>
 </body>
-<script>
-    function toggleAnswer(index) {
-        const answer = document.getElementById('answer-' + index);
-        const isExpanded = answer.style.display === 'block';
-        answer.style.display = isExpanded ? 'none' : 'block';
-    }
-    function obtenerEstadisticas() {
-        axios.all([
-            axios.get('https://www.practicasuniversitariasperu.com/contarObservacionesSemana'),
-            axios.get('https://www.practicasuniversitariasperu.com/contarObservacionesTotal'),
-            axios.get('https://www.practicasuniversitariasperu.com/contarObservacionesDiaAnterior')
-        ])
-            .then(axios.spread((responseSemana, responseTotal, responseDiaAnterior) => {
-                document.getElementById('spinner').style.display = 'none';
 
-                document.getElementById('contarObservacionesSemana').textContent = responseSemana.data.count;
-                document.getElementById('contarObservacionesTotal').textContent = responseTotal.data.count;
-                document.getElementById('contarObservacionesDiaAnterior').textContent = responseDiaAnterior.data.count;
-            }))
-            .catch(error => {
-                document.getElementById('spinner').style.display = 'none';
-
-            });
-    }
-
-</script>
 
 </html>

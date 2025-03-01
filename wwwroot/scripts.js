@@ -1,4 +1,4 @@
-function obtenerEstadisticas() {
+/*function obtenerEstadisticas() {
     axios.all([
         axios.get('https://practicasuniversitariasperu.com/contarObservacionesSemana'),
         axios.get('https://practicasuniversitariasperu.com/contarObservacionesTotal'),
@@ -27,7 +27,7 @@ function obtenerEstadisticas() {
 document.addEventListener("DOMContentLoaded", obtenerEstadisticas);
 
 
-
+*/
 
 
 
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", obtenerEstadisticas);
 let currentPage = 1; 
 const offersPerPage = 20; 
 let offersData = []; 
-
+/*
 window.onload = function () {
     obtenerEstadisticas();
 
@@ -68,7 +68,7 @@ window.onload = function () {
             document.getElementById('offers-container2').innerHTML = '<p class="error-message">Error al cargar las ofertas.</p>';
         });
 };
-
+*/
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
@@ -86,7 +86,7 @@ function getPlatformImage(platform) {
     };
     return platformImages[platform] || null;
 }
-
+/*
 function displayOffers() {
     const start = (currentPage - 1) * offersPerPage;
     const end = currentPage * offersPerPage;
@@ -119,7 +119,7 @@ function displayOffers() {
     updatePaginationButtons(); 
     displayPageNumbers(); 
 }
-
+*/
 function updatePaginationButtons() {
     const totalPages = Math.ceil(offersData.length / offersPerPage); 
 
