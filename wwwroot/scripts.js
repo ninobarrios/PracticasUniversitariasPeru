@@ -185,3 +185,19 @@ let isMenuOpen = false;
                 toggleMenu(); 
             }
         }
+
+
+
+        function toggleAnswer(id) {
+            var answer = document.getElementById('answer-' + id);
+            var button = answer.previousElementSibling;
+        
+            if (answer.style.display === 'none') {
+                answer.style.display = 'block';
+                button.setAttribute('aria-expanded', 'true');
+            } else {
+                answer.style.display = 'none';
+                button.setAttribute('aria-expanded', 'false');
+            }
+        }
+        
